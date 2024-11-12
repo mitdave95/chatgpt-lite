@@ -13,7 +13,7 @@ import { Flex, Heading, IconButton, ScrollArea, Tooltip } from '@radix-ui/themes
 import ContentEditable from 'react-contenteditable'
 import toast from 'react-hot-toast'
 import { AiOutlineClear, AiOutlineLoading3Quarters, AiOutlineUnorderedList } from 'react-icons/ai'
-import { FiSend } from 'react-icons/fi'
+import { FiSend, FiTrash2 } from 'react-icons/fi'
 import ChatContext from './chatContext'
 import type { Chat, ChatMessage } from './interface'
 import Message from './Message'
@@ -23,7 +23,7 @@ import './index.scss'
 const HTML_REGULAR =
   /<(?!img|table|\/table|thead|\/thead|tbody|\/tbody|tr|\/tr|td|\/td|th|\/th|br|\/br).*?>/gi
 
-export interface ChatProps {}
+export interface ChatProps { }
 
 export interface ChatGPInstance {
   setConversation: (messages: ChatMessage[]) => void
@@ -212,7 +212,7 @@ const Chat = (props: ChatProps, ref: any) => {
         align="center"
         py="3"
         px="4"
-        style={{ backgroundColor: 'var(--gray-a2)' }}
+        style={{ backgroundColor: '#f5f5f5' }}
       >
         <Heading size="4">{currentChatRef?.current?.persona?.name || 'None'}</Heading>
       </Flex>
@@ -283,10 +283,10 @@ const Chat = (props: ChatProps, ref: any) => {
                 disabled={isLoading}
                 onClick={clearMessages}
               >
-                <AiOutlineClear className="size-4" />
+                <FiTrash2 className="size-4" />
               </IconButton>
             </Tooltip>
-            <Tooltip content={'Toggle Sidebar'}>
+            {/* <Tooltip content={'Toggle Sidebar'}>
               <IconButton
                 variant="soft"
                 color="gray"
@@ -297,7 +297,7 @@ const Chat = (props: ChatProps, ref: any) => {
               >
                 <AiOutlineUnorderedList className="size-4" />
               </IconButton>
-            </Tooltip>
+            </Tooltip> */}
           </Flex>
         </Flex>
       </div>

@@ -18,7 +18,7 @@ import { AiOutlineClose, AiOutlineDelete, AiOutlineEdit } from 'react-icons/ai'
 import { LuMessageSquarePlus } from 'react-icons/lu'
 import { ChatContext, Persona } from '@/components'
 
-export interface PersonaPanelProps {}
+export interface PersonaPanelProps { }
 
 const PersonaPanel = (_props: PersonaPanelProps) => {
   const {
@@ -72,9 +72,9 @@ const PersonaPanel = (_props: PersonaPanelProps) => {
         align="center"
         py="3"
         px="4"
-        style={{ backgroundColor: 'var(--gray-a2)' }}
+        style={{ backgroundColor: '#f5f5f5' }}
       >
-        <Heading size="4">Persona Store </Heading>
+        <Heading size="4">Assistants</Heading>
         <IconButton
           size="2"
           variant="ghost"
@@ -85,26 +85,6 @@ const PersonaPanel = (_props: PersonaPanelProps) => {
           <AiOutlineClose className="size-4" />
         </IconButton>
       </Flex>
-      <Container size="3" className="grow-0 px-4">
-        <Flex gap="4" py="5">
-          <TextField.Root
-            size="3"
-            className="flex-1"
-            radius="large"
-            placeholder="Search Persona Template"
-            onChange={({ target }) => {
-              setSearchText(target.value)
-            }}
-          >
-            <TextField.Slot>
-              <MagnifyingGlassIcon height="16" width="16" />
-            </TextField.Slot>
-          </TextField.Root>
-          <Button size="3" radius="large" variant="surface" onClick={onOpenPersonaModal}>
-            Create
-          </Button>
-        </Flex>
-      </Container>
       <ScrollArea className="flex-1" type="auto" scrollbars="vertical">
         <Container size="3" className="px-4">
           <Flex direction="column" className="divide-y">
@@ -136,7 +116,7 @@ const PersonaPanel = (_props: PersonaPanelProps) => {
                   >
                     <LuMessageSquarePlus className="size-4" />
                   </IconButton>
-                  <IconButton
+                  {/* <IconButton
                     size="2"
                     variant="soft"
                     color="gray"
@@ -146,8 +126,8 @@ const PersonaPanel = (_props: PersonaPanelProps) => {
                     }}
                   >
                     <AiOutlineEdit className="size-4" />
-                  </IconButton>
-                  <IconButton
+                  </IconButton> */}
+                  {/* <IconButton
                     size="2"
                     variant="soft"
                     color="crimson"
@@ -157,7 +137,7 @@ const PersonaPanel = (_props: PersonaPanelProps) => {
                     }}
                   >
                     <AiOutlineDelete className="size-4" />
-                  </IconButton>
+                  </IconButton> */}
                 </Flex>
               </Flex>
             ))}

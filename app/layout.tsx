@@ -7,14 +7,12 @@ import '@/styles/theme-config.css'
 
 export const metadata = {
   title: {
-    default: 'ChatGPT Lite',
-    template: `%s - ChatGPT Lite`
+    default: 'SentientGPT',
+    template: `%s - SentientGPT`
   },
-  description: 'AI assistant powered by ChatGPT',
+  description: 'A demo by Sentient',
   icons: {
     icon: '/favicon.ico',
-    shortcut: '/favicon-16x16.png',
-    apple: '/apple-touch-icon.png'
   }
 }
 
@@ -23,11 +21,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body>
         <ThemesProvider>
-          <Header />
           {children}
           <Toaster />
         </ThemesProvider>
-        <Analytics />
       </body>
     </html>
   )
