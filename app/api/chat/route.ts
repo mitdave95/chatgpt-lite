@@ -83,6 +83,7 @@ const getOpenAIStream = async (
     body: JSON.stringify({
       model: model,
       frequency_penalty: 0,
+      min_tokens: 1,
       max_tokens: 4000,
       messages: messages,
       presence_penalty: 0,
@@ -95,9 +96,9 @@ const getOpenAIStream = async (
   if (res.status !== 200) {
     const statusText = res.statusText
     const responseBody = await res.text()
-    console.error(`OpenAI API response error: ${responseBody}`)
+    console.error(`Sentient API response error: ${responseBody}`)
     throw new Error(
-      `The OpenAI API has encountered an error with a status code of ${res.status} ${statusText}: ${responseBody}`
+      `The Sentient API has encountered an error with a status code of ${res.status} ${statusText}: ${responseBody}`
     )
   }
 
