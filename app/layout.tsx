@@ -7,8 +7,8 @@ import '@/styles/theme-config.css'
 
 export const metadata = {
   title: {
-    default: 'SentientGPT',
-    template: `%s - SentientGPT`
+    default: 'Fingerprint Demo',
+    template: `%s - Fingerprint Demo`
   },
   description: 'A demo by Sentient',
   icons: {
