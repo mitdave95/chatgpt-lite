@@ -12,7 +12,7 @@ export const DefaultPersonas: Persona[] = [
   {
     id: 'sentientgpt',
     role: 'system',
-    name: 'SentientGPT',
+    name: 'Fingerprint Demo',
     prompt: 'You are an AI assistant that helps people find information.',
     isDefault: true
   },
